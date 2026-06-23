@@ -1,12 +1,14 @@
 from openai import AzureOpenAI
+import os
+
 client = AzureOpenAI(
-    api_key= "4VO….j",
-    azure_endpoint="https://aro-openai.cognitiveservices.azure.com/openai/responses?",
+    api_key= os.environ["OPENAI_API_KEY"],
+    azure_endpoint=os.environ["OPENAI_ENDPOINT"],
     api_version="2025-04-01-preview"
 )
-#print("Connected")\
+
 response = client.responses.create(
     model="gpt-5.5",
-    input="Hallo"
+    input="Hu lang is een chinees?"
 )
 print(response.output_text)
