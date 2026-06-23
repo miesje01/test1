@@ -1,0 +1,1 @@
+De bedoeling is een kleine test applicatie te maken die in Azure Redhat Openshift gedeployed kan worden. Deze test applicatie maakt gebruik van een Azure FOundry ChatGPT5.5 model dat wordt aangeropen. De test applicatie is een python script.
