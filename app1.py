@@ -2,13 +2,15 @@ from flask import Flask
 from openai import AzureOpenAI
 import os
 
+app = Flask(_name_)
+
 client = AzureOpenAI(
     api_key= os.environ["OPENAI_API_KEY"],
     azure_endpoint=os.environ["OPENAI_ENDPOINT"],
     api_version="2025-04-01-preview"
 )
 
-@app.route(")
+@app.route("/")
 def root():
     respons = client.responses.create(
         model="gpt-5.5",
