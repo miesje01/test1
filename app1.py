@@ -2,7 +2,7 @@ from flask import Flask
 from openai import AzureOpenAI
 import os
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 client = AzureOpenAI(
     api_key= os.environ["OPENAI_API_KEY"],
@@ -26,5 +26,5 @@ def ask(vraag):
     )
     return response.output_text
 
-if _name_ == "_main_":
+if __name__== "__main__":
     app.run(host="0.0.0.0", port=8080)
