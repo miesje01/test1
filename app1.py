@@ -16,7 +16,7 @@ def root():
     )
     return response.output_text
 
-@app.route("ask/<vraag>")
+@app.route("/ask/<vraag>")
 def ask(vraag):
     response = client.responses.create(
         model="gpt-5.5",
