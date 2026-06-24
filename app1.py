@@ -12,7 +12,7 @@ client = AzureOpenAI(
 
 @app.route("/")
 def root():
-    respons = client.responses.create(
+    response = client.responses.create(
         model="gpt-5.5",
         input="Hu lang is een chinees?"
     )
